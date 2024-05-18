@@ -131,7 +131,10 @@ let bottomPipe={
 pipeArray.push(bottomPipe);
 }
 function moveBird(e){
-    if(e.code=="Space"||e.code=="ArrowUp"|| e.code=="keyX"){
+    if(e.type="keydown" && (e.code=="Space"||e.code=="ArrowUp"|| e.code=="keyX")){
+        velocityY=-6;
+    }
+    else if(e.type=="touchstart"){
         velocityY=-6;
     }
     if(gameOver){
